@@ -1,0 +1,42 @@
+body{
+  font-family: Circular Std,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li{
+    list-style-type: none;
+    background-color: white;
+    margin: 0 0 .75rem;
+    padding: .75rem;
+    color: $extra-dark-grey;
+  }
+}
+
+h1, h2, h3, h4{
+  margin: $reset;
+  padding: $reset;
+}
+
+h1{
+  margin-bottom: 6rem;
+}
+
+.container{
+  padding: $size-large 0;
+}
+
+.fixed-w{
+  width: 600px;
+}
+
+.error{
+  background-color: $dark-red;
+  color: $white;
+  padding: $size-large;
+  width: 100%;
+}

@@ -1,0 +1,35 @@
+.table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th{
+  border-top:  1px solid $white;
+  border-bottom: 1px solid $light-grey;
+}
+.table tr{
+  position: relative;
+}
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-bottom: 0 none;
+}
+
+.table__header{
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  width: 25%;
+  border-top: 2px solid $white;
+  &.selected{
+    border-top: 2px solid $extra-dark-grey;
+    width: 10%;
+  }
+}
+.table__cell{
+  text-align: center;
+  width: 25%;
+  position: relative;
+}

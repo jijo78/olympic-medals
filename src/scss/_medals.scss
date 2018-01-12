@@ -1,0 +1,21 @@
+.medals{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 40%;
+    position: absolute;
+    top: 2px;
+  
+    &.medals__gold {
+      background-color:$gold;
+    
+    }
+    
+    &.medals__silver {
+      background-color:$silver;
+    }
+    
+    &.medals__bronze {
+      background-color:$bronze;
+    }
+  }

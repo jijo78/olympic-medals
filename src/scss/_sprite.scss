@@ -1,0 +1,52 @@
+
+.flags-sprite {
+    background-image: url('https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png');
+    background-repeat: no-repeat;
+    // background-clip: content-box;
+    // background-size: 23%;
+    width: 53px;
+    height: 17px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+  .flags-sprite-USA {
+    background-position: 25px -204px;
+  }
+  .flags-sprite-NOR {
+    background-position: 25px -136px;
+  }
+  .flags-sprite-RUS {
+    background-position: 25px -153px;
+  }
+  .flags-sprite-NED {
+    background-position: 25px -119px;
+  }
+  .flags-sprite-FRA {
+    background-position: 25px -68px;
+  }
+  .flags-sprite-SWE {
+    background-position: 25px -187px;
+  }
+  .flags-sprite-ITA {
+    background-position: 25px -102px;
+  }
+  .flags-sprite-CAN {
+    background-position: 25px -34px;
+  }
+  .flags-sprite-SUI {
+    background-position: 25px -169px;
+  }
+  .flags-sprite-BLR {
+    background-position: 25px -15px;
+  }
+  .flags-sprite-GER {
+    background-position: 25px -85px;
+  }
+  .flags-sprite-AUT {
+    background-position: 25px 0px;
+  }
+  .flags-sprite-CHN {
+    background-position: 25px -51px;
+  }
