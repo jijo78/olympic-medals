@@ -20,21 +20,30 @@ class CountriesList extends Component {
 			gold: [],
 			silver: [],
 			bronze: [],
-			total: [],
-			error:{}
-
+			total: []
 		}
 		this.addSelectedClass = this.addSelectedClass.bind(this);
 	}
 
+	/**
+	 * addSelectedClass just add the active class to the right element
+	 * according to the value passed.
+	 */
 	addSelectedClass = (selected, type) => {
 		return selected === type ? 'selected' : ''
 	};
 
+	/**
+	 * fetchData load the payload to the view before the app it is rendered,
+	*/
 	componentWillMount(){
 		this.props.fetchData();	 
 	}
 
+	/**
+	 * @param {string} type.
+	 * updateTie check what values it is passed so it can call the right action.
+	 */
 	updateTie = ( type )=>{
 		if(type === 'gold'){
 			this.props.sortGold();
@@ -60,7 +69,7 @@ class CountriesList extends Component {
 	/**
 	 * @param {string} type.
 	 * renderMedalsit is called every time a new action it is dispatched so can re render
-	 * the view with the fr
+	 * the view with the right payload.
 	 */
 	renderMedals(type){
 		try{
@@ -86,7 +95,7 @@ class CountriesList extends Component {
 	}
 
 	/**
-	 * [renderResults render the countries on page load after this.props.fetchData(),
+	 * renderResults render the countries on page load after this.props.fetchData(),
 	 * it is called inside the component lifecycle.
 	 * @return {[JSX]}
 	 */
@@ -114,7 +123,6 @@ class CountriesList extends Component {
 
 	render() {
 		const { active } = this.state;
-		const { errors } = this.props
 		return (
 			<section>
 				<h1>Medal count</h1>
@@ -136,7 +144,6 @@ class CountriesList extends Component {
 						{active !== 'gold' ? this.renderMedals(active) : this.renderResults()}
 					</tbody>
 				</table>
-
 			</section>
 		);
 	}
@@ -148,13 +155,12 @@ function mapStateToProps(state){
 		gold: state.gold,
 		silver: state.silver,
 		bronze: state.bronze,
-		total: state.total,
-		errors: state.error
+		total: state.total
 	}
 }
 
 function mapDispacthToProps(dispatch){
-	return bindActionCreators({  fetchData, sortGold, sortSilver, sortBronze, sortTotal, total  }, dispatch);
+	return bindActionCreators({  fetchData, sortGold, sortSilver, sortBronze, sortTotal  }, dispatch);
 }
 
 export default connect( mapStateToProps,mapDispacthToProps )( CountriesList );

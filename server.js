@@ -5,7 +5,6 @@ const http = require('http');
 const request = require('request');
 const url = require('url');
 const app = express();
-const bodyParser  = require('body-parser');
 
 /**
  * Set HTTP server port.
@@ -15,17 +14,13 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-
 var server = http.createServer(app);
+
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(port);
-// use body parser so we can get info from POST and/or URL parameters
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(bodyParser.urlencoded({ extended: false }));
+
 
 //proxy the request
 app.use('/medals',  function( req, res ){

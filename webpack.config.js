@@ -22,14 +22,7 @@ module.exports = {
         {
           test: /\.scss$/,
           loader: 'style-loader!css-loader!sass-loader?sourceMap',
-        },
-        {
-        test: /\.svg/,
-        use: {
-            loader: 'svg-url-loader',
-            options: {}
         }
-      }
     ]
   }
 }
