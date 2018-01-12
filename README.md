@@ -5,5 +5,7 @@ dependencies.
 To do this run yarn install, if you don't have yarn installed,
 please refer to this documentation (https://yarnpkg.com/lang/en/docs/install/).
 
-Once done this, run yarn start, this will open the application on
+In order to compile the application run yarn bundle.
+
+Once this is done, run yarn start, this will open the application on
 http://localhost:5000
